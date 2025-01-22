@@ -1,3 +1,45 @@
+# cgfilm
+
+## Description
+Courte description du projet, par exemple :
+"Site vitrine pour Jimmy-Paul Coti, cinéaste, avec mise en avant de sa filmographie et contact."
+
+## Fonctionnalités principales
+- Navigation responsive
+- Support multilingue (Nuxt i18n)
+- Formulaire de contact sécurisé
+- SEO optimisé (balises meta, lazy loading, etc.)
+
+## Technologies utilisées
+- **Nuxt.js** : Framework front-end
+- **SCSS** : Préprocesseur CSS pour modularité
+- **Node.js** : Gestionnaire de dépendances avec npm
+- **PHP** : Pour le backend du formulaire de contact
+- **MySQL** : Pour la base de données
+
+## Installation
+### Prérequis :
+- Node.js v16+
+- npm v8+
+- PHP 7.4+ avec Composer
+
+### Étapes :
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/username/repository-name.git
+   cd repository-name
+2.	Installez les dépendances :
+bash
+CopierModifier
+npm install
+composer install
+3.	Lancez le serveur de développement :
+bash
+CopierModifier
+npm run dev
+4.	Accédez au projet à l’adresse : http://localhost:3000
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

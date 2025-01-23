@@ -1,8 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  ssr: true, // Active le server-side rendering
-  target: 'static', // Génération statique des pages
+  // Active le server-side rendering
+  ssr: true,
+
   app: {
     head: {
       title: 'CG-Film - Jimmy-Paul Coti',
@@ -13,13 +14,16 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   css: [
-    '@/assets/styles/main.scss' // Exemple : inclure un fichier SCSS global
+    '@/assets/scss/main.scss' // Exemple : inclure un fichier SCSS global
   ],
+
   modules: [
     '@nuxtjs/i18n', // Exemple : module pour la gestion des langues
     '@nuxt/image',  // Exemple : optimisation des images
   ],
+
   i18n: {
     locales: [
       { code: 'fr', name: 'Français', iso: 'fr-FR', file: 'fr.json' },
@@ -29,7 +33,10 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'locales/'
   },
+
   build: {
     transpile: ['vue-toastification'] // Exemple : transpile une lib si nécessaire
-  }
+  },
+
+  compatibilityDate: '2025-01-23'
 })

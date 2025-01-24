@@ -1,6 +1,7 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <div :key="$route.fullPath">
+      <NuxtPage />
+    </div>
   </div>
 </template>

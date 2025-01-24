@@ -1,7 +1,7 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
-  // Active le server-side rendering
+  // Enable server-side rendering
   ssr: true,
 
   app: {
@@ -10,33 +10,45 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Site vitrine de Jimmy-Paul Coti' }
-      ]
-    }
+        { name: 'description', content: 'Site vitrine de Jimmy-Paul Coti' },
+      ],
+    },
   },
 
   css: [
-    '@/assets/scss/main.scss' // Exemple : inclure un fichier SCSS global
+    '@/assets/scss/main.scss', // Include a global SCSS file
   ],
 
   modules: [
-    '@nuxtjs/i18n', // Exemple : module pour la gestion des langues
-    '@nuxt/image',  // Exemple : optimisation des images
-  ],
-
-  i18n: {
-    locales: [
-      { code: 'fr', name: 'Français', iso: 'fr-FR', file: 'fr.json' },
-      { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' }
+    [
+      '@nuxtjs/i18n', // Module for language management
+      {
+        locales: [
+          { code: 'fr', name: 'Français', iso: 'fr-FR', file: 'fr.json' },
+          { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
+        ],
+        defaultLocale: 'fr',
+        lazy: true,
+        langDir: 'locales/',
+      },
     ],
-    defaultLocale: 'fr',
-    lazy: true,
-    langDir: 'locales/'
+    '@nuxt/image',  // Image optimization
+  ],
+  
+  // Include a global plugin
+  plugins: ['~/plugins/fontawesome.js'],
+
+  vite: {
+    server: {
+      hmr: {
+        overlay: false,
+      },
+    },
   },
 
   build: {
-    transpile: ['vue-toastification'] // Exemple : transpile une lib si nécessaire
+    transpile: ['vue-toastification'], // Transpile a library if needed
   },
 
-  compatibilityDate: '2025-01-23'
-})
+  compatibilityDate: '2025-01-24',
+});

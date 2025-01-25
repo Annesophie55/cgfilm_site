@@ -1,5 +1,5 @@
-@use '_variables'; // Si ce n'est pas déjà fait
-@use '_mixins.scss';
-@use '_flex.scss';
-@use '_debug.scss';
-@use '_base.scss';
+@use '@/assets/scss/_variables'; 
+@use '@/assets/scss/mixins' as mixins;
+@use '@/assets/scss/_debug.scss';
+@use '@/assets/scss/_base.scss' as base;
+

@@ -27,6 +27,11 @@ header{
       margin: auto; /* Centre le logo */
       transform: translateX(25%);
     }
+
+    @media (max-width: 550px) {
+      transform: initial;
+      margin: 10px;
+    }
   }
 }
 

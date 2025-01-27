@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     '@/assets/scss/main.scss', // Include a global SCSS file
   ],
 
+  // alias: {
+  //   '@scss': '/assets/scss' // Remplacez par le chemin correct
+  // },
+
   modules: [
     [
       '@nuxtjs/i18n', // Module for language management

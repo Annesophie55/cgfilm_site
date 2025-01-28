@@ -5,6 +5,7 @@ footer {
   font-size: 12px;
   background: rgb(12, 173, 161);
   background: linear-gradient(212deg, rgba(12, 173, 161, 1) 30%, rgba(12, 148, 138, 0.9831168356906163) 48%, rgba(14, 124, 139, 1) 78%);
+  border-top: 0.5px solid var(--blue-accent-1);
 
   .footer-top {
     display: flex;

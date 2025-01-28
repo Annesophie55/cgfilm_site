@@ -16,6 +16,11 @@ body {
   color: var(--gray-dark);
   margin: 0;
   background-color: var(--white);
+  overflow-x: hidden;
+}
+
+main{
+  margin-top: 100px;
 }
 
 ul{

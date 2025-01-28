@@ -7,6 +7,7 @@ header{
   background: linear-gradient(212deg, rgba(12,173,161,1) 30%, rgba(12,148,138,0.9831168356906163) 48%, rgba(14,124,139,1) 78%);
   color: var(--white);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.5px solid var(--blue-accent-1);
   position: fixed;
   top: 0;
   left: 0;
@@ -142,6 +143,7 @@ header{
 /* Styles spécifiques au bloc extras du header */
 .header-extras{
   margin-left: auto;
+  margin-right: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

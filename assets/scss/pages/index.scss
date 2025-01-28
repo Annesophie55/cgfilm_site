@@ -1,0 +1,21 @@
+.carrousel {
+  width: 100vw;
+  height: 84vh;
+  padding-right: 15px;
+}
+
+.about{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+}
+
+.photo img {
+  border-radius: 50%;
+}
+
+blockquote{
+  text-align: center;
+  font-family: var(--font-accent);
+}

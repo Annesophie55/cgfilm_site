@@ -7,11 +7,11 @@
     navigation
     class="video-carousel"
   >
-    <swiper-slide v-for="(video, index) in videos" :key="index">
+    <swiper-slide v-for="(film, index) in films" :key="index">
       <div class="video-container">
         <!-- Vidéo en plein écran -->
         <iframe
-          :src="`${video.embedUrl}?autoplay=1&controls=0&mute=1&start=10&end=40&rel=0&loop=1&playlist=${video.videoId}`"
+          :src="`${film.embedUrl}?autoplay=1&controls=0&mute=1&start=10&end=40&rel=0&loop=1&playlist=${film.videoId}`"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -19,14 +19,14 @@
 
         <!-- Contenu animé -->
         <div class="film-info" :class="{ show: showContent }">
-          <h2>{{ video.title }}</h2>
-          <p>{{ video.subtitle }}</p>
-          <NuxtLink :to="video.detailPage" class="btn-discover">Découvrir</NuxtLink>
+          <h2>{{ film.title }}</h2>
+          <p>{{ film.subtitle }}</p>
+          <NuxtLink :to="film.detailPage" class="btn-discover">Découvrir</NuxtLink>
         </div>
         
         <!-- Bouton pour descendre -->
         <button @click="scrollToNextSection" class="btn-scroll">
-          Explorer l'univers CG-Film
+          Explorer l'univers de <em>CG-Film</em>
           <br>
           <font-awesome-icon :icon="['fas', 'chevron-down']" />
         </button>
@@ -42,6 +42,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ref, onMounted } from "vue";
+import films from "@/data/films";
 
 const videos = [
   {

@@ -1,0 +1,53 @@
+<template>
+  <div class="parallax-container">
+    <div class="impact-image">
+      <NuxtImg class="impact-img" src="/images/tournage_le_juste.webp" alt="photo du tournage de la série le juste" width="1260" height="250"/>
+    </div>
+  </div>
+</template>
+
+
+<script setup>
+import { onMounted } from "vue";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap.to(".impact-img", {
+    y: -200, // Déplace l'image vers le haut en scrollant
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".impact-image",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true, // Rend l'effet fluide
+    },
+  });
+});
+</script>
+
+<style scoped lang="scss">
+  .parallax-container {
+  position: relative;
+  width: 100%;
+  height: 200px; // Hauteur fixe pour le parallax
+  overflow: hidden; // Empêche le débordement sur le contenu au-dessus
+}
+
+.impact-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.impact-img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+</style>

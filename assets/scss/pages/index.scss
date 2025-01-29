@@ -1,3 +1,6 @@
+// .homepage{
+
+// }
 .carrousel {
   width: 100vw;
   height: 84vh;
@@ -6,16 +9,128 @@
 
 .about{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 40px;
+  padding: 60px;
+  box-shadow: 0 0 5px var(--gray-dark);
+  width: 80vw;
+  margin: 60px auto;
+  border-radius: 5px;
+
+  @media (max-width: 768px){
+    flex-direction: column;
+  }
 }
 
 .photo img {
   border-radius: 50%;
+  box-shadow: 0 0 5px var(--gray-dark);
+}
+
+.citation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+
+  button{
+    background-color: var(--white);
+    color: var(--gray-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 0 0 5px var(--gray-dark);
+    margin-top: 25px;
+  }
 }
 
 blockquote{
   text-align: center;
+}
+
+cite{
+  font-weight: bold;
   font-family: var(--font-accent);
+  margin-top: 15px;
+}
+
+h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    background: rgb(12, 173, 161);
+    background: linear-gradient(212deg, rgba(12, 173, 161, 1) 30%, rgba(12, 148, 138, 0.9831168356906163) 48%, rgba(14, 124, 139, 1) 78%);
+    font-family: var(--font-secondary);
+    color: var(--white);
+    padding: 45px;
+}
+
+.impact-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+}
+
+.impact-items{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  color: rgb(12, 173, 161);
+  text-align: center;
+  height: auto;
+  font-size: 18px;
+
+  .impact-icon{
+    font-size: 3rem;
+  }
+
+  .impact-nb{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .impact-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+}
+
+
+.partners{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: 100vw;
+  padding: 60px;
+
+  .partners-text{
+    box-shadow: 0 0 5px var(--gray-dark);
+    padding: 15px;
+  }
+
+  .partners-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .partners-img{
+      width: 400px;
+      height: 410px;
+      border: 5px solid var(--gray-dark);
+      box-shadow: 0 0 5px var(--gray-dark);
+      margin-left: 50px;
+  
+      img{
+        box-shadow: 0 0 5px var(--gray-dark);
+      }
+    }
+  }
 }

@@ -23,11 +23,8 @@ logs
 .env.*
 !.env.example
 
-# Exclure les images et vidéos
+# Exclude images and videos
 public/images/
 public/videos/
 
 
-# Exclure les images et vidéos
-public/images/
-public/videos/

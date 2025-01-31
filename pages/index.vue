@@ -57,7 +57,7 @@
                 <ul  class="impact-items">
                   <li class="impact-nb"><NumberCounter :max="3280" :step="11" :speed="20" /></li>
                   <li class="impact-icon"><font-awesome-icon :icon="['fas', 'clock']" /></li>
-                  <li class="impact-title">Minutes de production en film argentique</li>
+                  <li class="impact-title">Minutes de film argentique</li>
                 </ul>
               </li>
             </ul>
@@ -79,7 +79,7 @@
             </div>
               <div class="partners-img-wrapper">
                 <div class="partners-img">
-                  <NuxtImg src="/images/rolande_gayet.webp" alt="Logos des partenaires" width="400" height="400" />
+                  <NuxtImg src="/images/rolande_gayet.webp" alt="Logos des partenaires" width="500" height="400" />
                 </div>
             </div>
         </div>
@@ -87,11 +87,10 @@
 
       <section>
         <h2>Partenaires & Co-productions CG-FILM</h2>
+        <Banderole />
       </section>
-
     </main>
 
-    <!-- Appelle ton Footer ici -->
     <Footer />
   </div>
 </template>
@@ -104,11 +103,7 @@ import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import NumberCounter from '~/components/NumberCounter.vue';
 import Parallax from '~/components/Parallax.vue';
-
-
-
-
-  // Aucun script nécessaire pour cette page minimaliste
+import Banderole from '~/components/Banderole.vue';
 </script>
 
 <style scoped lang="scss">

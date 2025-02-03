@@ -41,22 +41,23 @@
               <li>
                 <ul class="impact-items">
                   <li class="impact-nb"><NumberCounter :max="49" :step="1" :speed="20" /></li>
-                  <li class="impact-icon"><font-awesome-icon :icon="['fas', 'clapperboard']" /></li>
+                  <li class="impact-icon"><client-only><font-awesome-icon :icon="['fas', 'clapperboard']" /></client-only></li>
                   <li class="impact-title">Films réalisés</li>
-
                 </ul>
               </li>
+              <hr>
               <li>
                 <ul class="impact-items">
                   <li class="impact-nb"><NumberCounter :max="1165" :step="4" :speed="20" /></li>
-                  <li class="impact-icon"><font-awesome-icon :icon="['fas', 'tv']" /></li>
+                  <li class="impact-icon"><client-only><font-awesome-icon :icon="['fas', 'tv']" /></client-only></li>
                   <li  class="impact-title">Diffusions TV dans le monde</li>
                 </ul>
               </li>
+              <hr>
               <li>
                 <ul  class="impact-items">
                   <li class="impact-nb"><NumberCounter :max="3280" :step="11" :speed="20" /></li>
-                  <li class="impact-icon"><font-awesome-icon :icon="['fas', 'clock']" /></li>
+                  <li class="impact-icon"><client-only><font-awesome-icon :icon="['fas', 'clock']" /></client-only></li>
                   <li class="impact-title">Minutes de film argentique</li>
                 </ul>
               </li>
@@ -65,9 +66,9 @@
         <Parallax />
       </section>
 
-      <section>
+      <section class="partners">
         <h2>Un regard sur Jimmy-Paul Coti</h2>
-        <div class="partners">
+        <div class="partners-container">
             <div class="partners-text">
               <h3>Rolande GAYET – <strong>Productrice exclusive</strong></h3>
               <p>J’ai rencontré pour la première fois <strong>Jimmy-Paul COTI </strong>à Salon de Provence, lors de la présentation de son film L’ETINCELLE. Il s’appelait à l’époque Jean-Pierre Coindet. Dans ce film il traitait le sujet des incendies de forêts dans le sud de la France et venait de recevoir la coupe du meilleur film, remise par le maire de Cannes à l’occasion du <strong>festival de l’Union Régionale des Cinéastes de Courts-Métrages</strong>.</p>
@@ -78,9 +79,11 @@
 
             </div>
               <div class="partners-img-wrapper">
-                <div class="partners-img">
+                <figure class="partners-img">
                   <NuxtImg src="/images/rolande_gayet.webp" alt="Logos des partenaires" width="500" height="400" />
-                </div>
+                  <figcaption>Rolande Gayet en forêt lors d’un tournage</figcaption>
+                </figure>
+
             </div>
         </div>
       </section>

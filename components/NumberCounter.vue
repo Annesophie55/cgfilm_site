@@ -4,40 +4,34 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    max: {
-      type: Number,
-      required: true
-    },
-    speed: {
-      type: Number,
-      default: 50 // Temps en millisecondes entre chaque incrémentation
+<script setup lang="ts">
+import { ref, onMounted, defineProps } from "vue";
+
+// Définition des props avec typage strict
+const props = defineProps<{
+  max: number;
+  speed?: number; // Optionnel avec une valeur par défaut
+}>();
+
+// Valeur réactive pour l'affichage du compteur
+const currentNumber = ref<number>(0);
+
+onMounted(() => {
+  startCounting();
+});
+
+// Fonction de comptage avec typage strict
+const startCounting = (): void => {
+  const step: number = Math.ceil(props.max / 100);
+  const interval = setInterval(() => {
+    if (currentNumber.value < props.max) {
+      currentNumber.value += step;
+      if (currentNumber.value > props.max) {
+        currentNumber.value = props.max;
+      }
+    } else {
+      clearInterval(interval);
     }
-  },
-  data() {
-    return {
-      currentNumber: 0
-    };
-  },
-  mounted() {
-    this.startCounting();
-  },
-  methods: {
-    startCounting() {
-      const step = Math.ceil(this.max / 100); // Ajuste la progression
-      const interval = setInterval(() => {
-        if (this.currentNumber < this.max) {
-          this.currentNumber += step;
-          if (this.currentNumber > this.max) {
-            this.currentNumber = this.max;
-          }
-        } else {
-          clearInterval(interval);
-        }
-      }, this.speed);
-    }
-  }
+  }, props.speed ?? 50); // Utilisation de la valeur par défaut
 };
 </script>

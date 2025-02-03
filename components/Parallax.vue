@@ -1,38 +1,44 @@
 <template>
   <div class="parallax-container">
     <div class="impact-image">
-      <NuxtImg class="impact-img" src="/images/tournage_le_juste.webp" alt="photo du tournage de la série le juste" width="1260" height="250"/>
+      <NuxtImg
+        class="impact-img"
+        src="/images/tournage_le_juste.webp"
+        alt="photo du tournage de la série le juste"
+        width="1260"
+        height="250"
+      />
     </div>
   </div>
 </template>
 
-
-<script setup>
+<script setup lang="ts">
 import { onMounted } from "vue";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Enregistrement du plugin avec typage correct
 gsap.registerPlugin(ScrollTrigger);
 
-onMounted(() => {
+onMounted((): void => {
   gsap.to(".impact-img", {
-    y: -200, // Déplace l'image vers le haut en scrollant
+    y: "-37%", // Réduit l'effet de décalage
     ease: "none",
     scrollTrigger: {
       trigger: ".impact-image",
       start: "top bottom",
       end: "bottom top",
-      scrub: true, // Rend l'effet fluide
+      scrub: true, // Effet fluide
     },
   });
 });
 </script>
 
 <style scoped lang="scss">
-  .parallax-container {
+.parallax-container {
   position: relative;
   width: 100%;
-  height: 200px; // Hauteur fixe pour le parallax
+  height: 170px; // Hauteur fixe pour le parallax
   overflow: hidden; // Empêche le débordement sur le contenu au-dessus
 }
 
@@ -49,5 +55,4 @@ onMounted(() => {
   height: 150%;
   object-fit: cover;
 }
-
 </style>

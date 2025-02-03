@@ -27,7 +27,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
-import films from '@/data/films';
+import films from '~/data/films';
 
 // Récupérer le slug depuis l'URL
 const route = useRoute();

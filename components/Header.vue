@@ -49,9 +49,9 @@
       <div class="header-extras">
         <LanguageSwitch />
         <ul class="social-links">
-          <li><a href="https://www.youtube.com/user/cgfilm13" aria-label="YouTube"><font-awesome-icon :icon="['fab', 'youtube']" /></a></li>
-          <li><a href="https://www.facebook.com/jimmy.coty.1" aria-label="Facebook"><font-awesome-icon :icon="['fab', 'facebook']" /></a></li>
-          <li><a href="https://www.linkedin.com/in/jimmy-paul-coti-90829b76/" aria-label="LinkedIn"><font-awesome-icon :icon="['fab', 'linkedin']" /></a></li>
+          <li><a href="https://www.youtube.com/user/cgfilm13" aria-label="YouTube"><client-only><font-awesome-icon :icon="['fab', 'youtube']" /></client-only></a></li>
+          <li><a href="https://www.facebook.com/jimmy.coty.1" aria-label="Facebook"><client-only><font-awesome-icon :icon="['fab', 'facebook']" /></client-only></a></li>
+          <li><a href="https://www.linkedin.com/in/jimmy-paul-coti-90829b76/" aria-label="LinkedIn"><client-only><font-awesome-icon :icon="['fab', 'linkedin']" /></client-only></a></li>
         </ul>
       </div>
     </div>
@@ -59,18 +59,19 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 import LanguageSwitch from '../components/LanguageSwitch.vue';
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
 
-// Gestion de l'état du menu
-const isMenuOpen = ref(false);
+// Gestion de l'état du menu avec typage strict
+const isMenuOpen: Ref<boolean> = ref(false);
 
 // Fonction pour ouvrir/fermer le menu
-function toggleMenu() {
+const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value;
-}
+};
 </script>
+
 
 <style scoped lang="scss">
 @use '@/assets/scss/components/_header.scss';

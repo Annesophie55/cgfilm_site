@@ -16,16 +16,18 @@
   </div>
 </template>
 
-<script setup>
-import parteners from "@/data/parteners";
+<script setup lang="ts">
+import { ref } from "vue";
+import parteners from "~/data/parteners";
 </script>
+
 
 <style scoped lang="scss">
 .banderole {
   overflow: hidden;
   width: 100%;
   background-color: #f8f8f8;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 60px 0;
 }
 
 .banderole-track {

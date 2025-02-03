@@ -1,24 +1,43 @@
-export default [
+export interface CastMember {
+  name: string;
+  role: string;
+}
+
+export interface Film {
+  id: number;
+  title: string;
+  subtitle: string;
+  releaseDate: string;
+  poster: string;
+  embedUrl: string;
+  videoId: string;
+  images: string[];
+  description: string;
+  cast: CastMember[];
+  detailPage: string;
+}
+
+
+const films: Film[] = [
   {
     id: 1,
     title: "Les Sabots de Vénus",
     subtitle: "Sélection Festival de Cannes",
-    releaseDate: "2023-05-17",  // Date de sortie
-    poster: "/images/sabots_venus.webp",  // Affiche principale
-    embedUrl: "https://www.youtube.com/embed/fdCmZEv1LLU",// Lien vers la 
-    // bande-annonce 
-    videoId: "fdCmZEv1LLU",  // Identifiant de la vidéo
+    releaseDate: "2023-05-17",
+    poster: "/images/sabots_venus.webp",
+    embedUrl: "https://www.youtube.com/embed/fdCmZEv1LLU",
+    videoId: "fdCmZEv1LLU",
     images: [
       "/images/sabots-venus-1.webp",
       "/images/sabots-venus-2.webp",
       "/images/sabots-venus-3.webp"
-    ], // Galerie d'images
-    description: "Un clin d’oeil malicieux sur la santé et l’affaire du sang contaminé, tandis que le spectateur est emporté dans une aventure humaine au milieu de paysages magnifiques dans les sept plus belles régions de France",  // Description
+    ],
+    description: "Un clin d’oeil malicieux sur la santé et l’affaire du sang contaminé au milieu de paysages magnifiques dans les sept plus belles régions de France",
     cast: [
       { name: "Christian Barbier", role: "Personnage principal" },
       { name: "Jean-Paul Egalon", role: "Personnage secondaire" },
       { name: "Pierre Magré", role: "Musique originale" }
-    ], // Distribution
+    ],
     detailPage: "/films/les-sabots-de-venus"
   },
   {
@@ -42,4 +61,7 @@ export default [
     detailPage: "/films/l-aile-et-la-bete"
   }
 ];
+
+export default films;
+
 

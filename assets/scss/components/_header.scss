@@ -52,7 +52,7 @@ header{
     background: rgb(12,173,161);
     background: linear-gradient(212deg, rgba(12,173,161,1) 30%, rgba(12,148,138,0.9831168356906163) 48%, rgba(14,124,139,1) 78%);
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 0;
     right: 0;
     padding: 20px;
@@ -149,17 +149,9 @@ header{
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
-    position: absolute;
-    flex-direction: column; /* Aligne les extras en colonne */
-    align-items: flex-start; /* Aligne les éléments à gauche */
-    margin-left: 15px; /* Décalage depuis le bord gauche */
-    left: 0;
-    top: 20%
-  }
-
-  @media (max-width: 550px) {
     display: none;
   }
+
 }
 
 /* Styles spécifiques aux lien vers les réseaux sociaux */
@@ -190,7 +182,7 @@ header{
 .header-extras-mobile {
   display: none;
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     display: block; /* Affiche les extras dans la navigation */
     margin-top: 20px;
   }
@@ -201,7 +193,7 @@ header{
     gap: 10px;
     margin-top: 10px;
 
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
       display: flex; /* Affiche les extras dans la navigation */
       flex-direction: row; /* Aligne les icônes horizontalement */
     }

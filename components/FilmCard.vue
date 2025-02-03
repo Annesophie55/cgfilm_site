@@ -3,43 +3,38 @@
     <div class="film-card__wrapper">
       <div class="film-card__image">
         <NuxtLink :to="film.detailPage">
-          <NuxtImg :src="film.poster" :alt="film.title" width="400" />
+          <NuxtImg :src="film.poster" :alt="film.title" width="220" loading="lazy"/>
         </NuxtLink>
       </div>
       <div class="film-card__details">
         <div class="film-card__content">
           <h3>{{ film.title }}</h3>
           <p>Sortie : {{ film.releaseDate }}</p>
-          <div>
-        <span v-for="(actor, index) in film.cast" :key="index">
-          {{ actor.name }}{{ index < film.cast.length - 1 ? ', ' : '' }}
-        </span>
-      </div>
-        </div>
-        <div class="film-card__description">
+          <div class="film-card__description">
           <p>{{ film.description }}</p>
+        </div>
         </div>
       </div>
     </div>
-    <div class="film-card__cta">
-        <NuxtLink v-if="film.detailPage" :to="film.detailPage" class="btn-discover">
-          Voir la fiche
-        </NuxtLink>
-        <NuxtLink v-if="film.embedUrl" :to="film.embedUrl" class="btn-watch">
-          Bande-annonce
-        </NuxtLink>
+    <div class="film-card__footer">
+      <div class="film-card__cta">
+      <NuxtLink v-if="film.detailPage" :to="film.detailPage" class="btn-discover">
+        Voir la fiche
+      </NuxtLink>
+      <NuxtLink v-if="film.embedUrl" :to="film.embedUrl" class="btn-watch">
+        Bande-annonce
+      </NuxtLink>
       </div>
+    </div>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  film: {
-    type: Object,
-    required: true,
-  },
-});
+<script setup lang="ts">
+import type { Film } from "@/data/films"; // ✅ Import de l'interface Film
+
+defineProps<{ film: Film }>(); // ✅ Typage strict de la prop `film`
 </script>
+
 
 <style scoped lang="scss">
 @use '@/assets/scss/components/film-card.scss';

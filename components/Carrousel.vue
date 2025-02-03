@@ -28,64 +28,58 @@
         <button @click="scrollToNextSection" class="btn-scroll">
           Explorer l'univers de <em>CG-Film</em>
           <br>
+          <client-only>
           <font-awesome-icon :icon="['fas', 'chevron-down']" />
+          </client-only>
         </button>
       </div>
     </swiper-slide>
   </swiper>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ref, onMounted } from "vue";
-import films from "@/data/films";
 
-const videos = [
-  {
-    title: "Les Sabots de Vénus",
-    subtitle: "Sélection Festival de Cannes",
-    embedUrl: "https://www.youtube.com/embed/fdCmZEv1LLU",
-    videoId: "fdCmZEv1LLU",
-    detailPage: "/films/les-sabots-de-venus",
-  },
-  {
-    title: "L'Aile et la Bête",
-    subtitle: "Un James Bond à la Jimmy-Paul Coti",
-    embedUrl: "https://www.youtube.com/embed/WfNqy_tRNcc",
-    videoId: "WfNqy_tRNcc",
-    detailPage: "/films/l-aile-et-la-bete",
-  },
-  {
-    title: "Le Radeau",
-    subtitle: "Un film d'aventure de la réalisation à la projection",
-    embedUrl: "https://www.youtube.com/embed/F4S2cXmHizc",
-    videoId: "F4S2cXmHizc",
-    detailPage: "/films/le-radeau",
-  },
-];
+// ✅ Ajout du typage pour films
+interface Film {
+  title: string;
+  subtitle: string;
+  embedUrl: string;
+  detailPage: string;
+  videoId: string;
+}
 
-const showContent = ref(false);
+import filmsData from "~/data/films"; // Assure-toi que le fichier `films.ts` est bien typé
+
+const films = ref<Film[]>(filmsData); // Typage de la liste des films
+
+// Ajout du typage boolean
+const showContent = ref<boolean>(false);
+
 onMounted(() => {
   setTimeout(() => {
     showContent.value = true;
   }, 5000);
 });
 
-const scrollToNextSection = () => {
-  const nextSection = document.querySelector(".next-section");
+// Typage de la fonction scrollToNextSection
+const scrollToNextSection = (): void => {
+  const nextSection = document.querySelector<HTMLElement>(".next-section");
   if (nextSection) {
     nextSection.scrollIntoView({ behavior: "smooth" });
   }
 };
 </script>
 
+
 <style scoped>
 .video-carousel {
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 

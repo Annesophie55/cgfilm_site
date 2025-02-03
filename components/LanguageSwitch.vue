@@ -7,17 +7,21 @@
   </button>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+import { ref } from "vue";
 
-// Variable réactive pour suivre la langue actuelle
-const currentLang = ref('fr');
 
-// Fonction pour changer la langue
-function toggleLanguage() {
+// Définition d'un type pour la langue
+type Language = 'fr' | 'en';
+
+// Variable réactive avec typage strict
+const currentLang = ref<Language>('fr');
+
+// Fonction pour changer la langue avec typage
+const toggleLanguage = (): void => {
   currentLang.value = currentLang.value === 'fr' ? 'en' : 'fr';
   console.log(`Langue actuelle : ${currentLang.value}`);
-}
+};
 </script>
 
 <style scoped>

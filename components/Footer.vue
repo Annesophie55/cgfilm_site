@@ -2,7 +2,7 @@
   <footer>
       <div class="footer-top">
         <!-- Navigation rapide -->
-        <div>
+        <div class="footer-nav">
           <h6>Navigation rapide</h6>
           <ul>
             <li class="nav-link"><nuxt-link to="/">Accueil</nuxt-link></li>
@@ -13,12 +13,7 @@
           </ul>
         </div>
 
-        <!-- Logo -->
-        <div class="footer-logo">
-          <nuxt-link to="/" class="logo">
-            <NuxtImg src="/images/logo.webp" alt="Logo de cgfilm13" width="150" priority />
-          </nuxt-link>
-        </div>
+
 
         <!-- Contact -->
         <div class="footer-contact">
@@ -43,7 +38,9 @@
                 href="https://www.youtube.com/user/cgfilm13"
                 aria-label="Lien vers le Youtube de cgfilm13"
               >
+              <client-only>
                 <font-awesome-icon :icon="['fab', 'youtube']" />
+              </client-only>
               </a>
             </li>
             <li>
@@ -51,7 +48,9 @@
                 href="https://www.facebook.com/jimmy.coty.1"
                 aria-label="Lien vers le Facebook de cgfilm13"
               >
+              <client-only>
                 <font-awesome-icon :icon="['fab', 'facebook']" />
+              </client-only>
               </a>
             </li>
             <li>
@@ -59,10 +58,18 @@
                 href="https://www.linkedin.com/in/jimmy-paul-coti-90829b76/"
                 aria-label="Lien vers le Linkedin de Jimmy Paul Coti"
               >
+              <client-only>
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
+              </client-only>
               </a>
             </li>
           </ul>
+        </div>
+                <!-- Logo -->
+        <div class="footer-logo">
+          <nuxt-link to="/" class="logo">
+            <NuxtImg src="/images/logo.webp" alt="Logo de cgfilm13" width="150" priority />
+          </nuxt-link>
         </div>
       </div>
 

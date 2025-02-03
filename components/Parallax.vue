@@ -14,23 +14,27 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNuxtApp } from "nuxt/app";
 
-// Enregistrement du plugin avec typage correct
-gsap.registerPlugin(ScrollTrigger);
+onMounted(() => {
+  const nuxtApp = useNuxtApp();
 
-onMounted((): void => {
-  gsap.to(".impact-img", {
-    y: "-37%", // Réduit l'effet de décalage
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".impact-image",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true, // Effet fluide
-    },
-  });
+  // Vérifie que les plugins GSAP et ScrollTrigger existent bien avant de les utiliser
+  if (nuxtApp.$gsap && nuxtApp.$ScrollTrigger) {
+    const gsap = nuxtApp.$gsap as typeof import("gsap").default;
+    const ScrollTrigger = nuxtApp.$ScrollTrigger as typeof import("gsap/ScrollTrigger").ScrollTrigger;
+
+    gsap.to(".impact-img", {
+      y: "-37%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".impact-image",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }
 });
 </script>
 
@@ -38,8 +42,8 @@ onMounted((): void => {
 .parallax-container {
   position: relative;
   width: 100%;
-  height: 170px; // Hauteur fixe pour le parallax
-  overflow: hidden; // Empêche le débordement sur le contenu au-dessus
+  height: 170px;
+  overflow: hidden;
 }
 
 .impact-image {

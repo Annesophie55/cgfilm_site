@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts', // Google Fonts
   ],
 
+  // @ts-ignore
   googleFonts: {
     families: {
       'Dancing Script': [400, 700],
@@ -61,7 +62,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['vue-toastification'], // Transpile a library if needed
+    transpile: ['vue-toastification', 'gsap'], // Transpile a library if needed
   },
 
   compatibilityDate: '2025-01-24',

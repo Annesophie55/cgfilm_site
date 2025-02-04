@@ -56,16 +56,16 @@ cite{
   margin-top: 15px;
 }
 
-h2{
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
-    background: rgb(12, 173, 161);
-    background: linear-gradient(212deg, rgba(12, 173, 161, 1) 30%, rgba(12, 148, 138, 0.9831168356906163) 48%, rgba(14, 124, 139, 1) 78%);
-    font-family: var(--font-secondary);
-    color: var(--white);
-    padding: 45px;
-}
+// h2{
+//     text-align: center;
+//     width: 100%;
+//     margin-bottom: 30px;
+//     background: rgb(12, 173, 161);
+//     background: linear-gradient(212deg, rgba(12, 173, 161, 1) 30%, rgba(12, 148, 138, 0.9831168356906163) 48%, rgba(14, 124, 139, 1) 78%);
+//     font-family: var(--font-secondary);
+//     color: var(--white);
+//     padding: 45px;
+// }
 
 .impact-container{
   display: grid;
@@ -153,10 +153,6 @@ h2{
       box-shadow: 0 0 5px var(--gray-dark);
       border: 5px solid var(--gray-dark);
       height: auto;
-    }
-    figcaption{
-      font-size: 14px;
-      opacity: 0.8;
     }
   }
 }

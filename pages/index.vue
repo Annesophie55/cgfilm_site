@@ -11,7 +11,7 @@
 
       <!-- Section fictive pour tester -->
       <section class="about-container">
-        <h2>Présentation du réalisateur</h2>
+        <h2 class="section-title">Présentation du réalisateur</h2>
         <div class="about">
           <div class="photo">
             <NuxtImg src="/images/portrait.webp" alt="Photo de Jimmy-Paul Coti" width="280" priority />
@@ -30,12 +30,12 @@
       </section>
 
       <section class="films">
-        <h2>Les œuvres de Jimmy-Paul Coti</h2>
+        <h2 class="section-title">Les œuvres de Jimmy-Paul Coti</h2>
         <Gallery />
       </section>
 
       <section class="impact">
-        <h2>L'impact de Jimmy-Paul Coti</h2>
+        <h2 class="section-title">L'impact de Jimmy-Paul Coti</h2>
         <div>
             <ul class="impact-container">
               <li>
@@ -67,7 +67,7 @@
       </section>
 
       <section class="partners">
-        <h2>Un regard sur Jimmy-Paul Coti</h2>
+        <h2 class="section-title">Un regard sur Jimmy-Paul Coti</h2>
         <div class="partners-container">
             <div class="partners-text">
               <h3>Rolande GAYET – <strong>Productrice exclusive</strong></h3>
@@ -89,7 +89,7 @@
       </section>
 
       <section>
-        <h2>Partenaires & Co-productions CG-FILM</h2>
+        <h2 class="section-title">Partenaires & Co-productions CG-FILM</h2>
         <Banderole />
       </section>
     </main>

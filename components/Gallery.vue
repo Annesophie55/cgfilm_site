@@ -35,8 +35,12 @@ import FilmCard from "../components/FilmCard.vue";
     box-shadow: 0 0 5px var(--gray-dark);
     margin-top: 25px;
     width: 75%;
-    height: 60px;
+    height: auto;
     font-family: var(--font-primary-bold);
     font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

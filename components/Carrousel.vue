@@ -45,7 +45,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { ref, onMounted } from "vue";
 
-// ✅ Ajout du typage pour films
+// Ajout du typage pour films
 interface Film {
   title: string;
   subtitle: string;
@@ -69,7 +69,7 @@ onMounted(() => {
 
 // Typage de la fonction scrollToNextSection
 const scrollToNextSection = (): void => {
-  const nextSection = document.querySelector<HTMLElement>(".next-section");
+  const nextSection = document.querySelector<HTMLElement>(".about-container");
   if (nextSection) {
     nextSection.scrollIntoView({ behavior: "smooth" });
   }
@@ -133,10 +133,10 @@ const scrollToNextSection = (): void => {
   position: absolute;
   bottom: 5%;
   left: 50%;
-  background-color: var(--black);
+  background: rgb(217, 231, 230);
   transform: translateX(-50%);
-  color: var(--gray-medium);
-  opacity: 0.6;
+  color: var(--gray-dark);
+  opacity: 0.8;
   padding: 5px 15px;
   border: none;
   border-radius: 5px;

@@ -4,12 +4,13 @@
     <section class="intro">
       <div class="intro-content">
         <figure>
-          <NuxtImg src="/images/jimmy_radeau.webp" alt="Photo de Jimmy-Paul Coti lors du tournage de 'Aventure sur la rivière blanche'" width="1235" height="300"/>
+          <NuxtImg src="/images/jimmy_radeau.webp" alt="Photo de Jimmy-Paul Coti lors du tournage de 'Aventure sur la rivière blanche'" width="1260" height="430"/>
           <figcaption>Quand le cascadeur est introuvable! - "Aventure sur la rivière Blanche"</figcaption>
         </figure>
 
         <h1 class="intro-title">Découvrez l'univers de Jimmy-Paul Coti</h1>
         <p class="intro-txt">"Jimmy-Paul Coti, réalisateur autodidacte et visionnaire, donne vie à des récits captivants depuis plus de quatre décennies."</p>
+        <BtnScroll class="btn-scroll" sectionToScroll=".film-maker__bio" btnContent="Découvrir le réalisateur"/>
       </div>
       <div class="overlay"></div>
     </section>
@@ -33,8 +34,8 @@
         </div>
       </div>
     </section>
-    <hr/>
     <section class="time-line">
+      <CinemaCurtain />
       <TimeLine />
     </section>
   </main>
@@ -46,6 +47,8 @@
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import TimeLine from '~/components/TimeLine.vue';
+import BtnScroll from '~/components/BtnScroll.vue';
+import CinemaCurtain from '~/components/CinemaCurtain.vue';
 
 </script>
 

@@ -1,29 +1,51 @@
 .intro{
   position: relative;
-  height: 300px;
-  margin-bottom: 40px;
+  max-height: 430px;
+  width: 100vw;
+  margin-bottom: 30px;
+
+  @media (max-width: 430px){
+    margin-bottom: 50px;
+  }
+
+}
+
+.intro-content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-height: 430px;
+
+  figure{
+    position: relative;
+    width: 100%;
+    height: 430px;
+    margin: 0;
+  }
 }
 
 .intro-title{
   position: absolute;
   color: var(--gray-light);
   top: 50px;
-  right: 60px;
+  right: 5%;
   font-family: var(--font-secondary-bold-italic);
+  font-size: clamp(1rem, 2.3vw, 2rem);
   z-index: 2;
   text-align: center;
-}
 
-hr{
-  width: 75%;
-  margin: 80px auto;
+  @media (max-width: 560px){
+    top: 30px;
+    right: 0;
+    left: 0;
+  }
 }
 
 .overlay{
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 300px;
+  height: 100%;
   z-index: 1;
   top: 0;
 }
@@ -32,42 +54,71 @@ hr{
   position: absolute;
   color: var(--gray-light);
   top: 130px;
-  right: 120px;
+  right: 5%;
   font-family: var(--font-primary-regular);
   z-index: 2;
-  width: 300px;
+  width: 400px;
   text-align: center;
-}
+  font-size: clamp(1rem, 2vw, 1rem);
 
-.bio-content{
+  @media (max-width: 768px){
+    width: 250px;
+  }
+
+  @media (max-width: 560px){
+    width: 170px;
+  }
+}
+.bio-content {
+  position: relative;
   padding: 40px 80px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-}
+  min-height: 100vh; /* Assurer une hauteur suffisante */
 
-.img-fixed-container{
-  width: 100%;
-}
-
-.img-content{
-  figure{
-    img{
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+  @media (max-width: 768px){
+    flex-direction: column;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.bio-txt{
-  width: 100%;
-  p{
+.img-fixed-container {
+  width: 40%;
+  max-width: 400px;
+  position: relative;
+
+  @media (max-width: 768px){
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.img-content {
+  position: sticky;
+  top: 20px; /* Garder une marge par rapport au haut */
+  height: auto;
+}
+
+.bio-txt {
+  width: 55%;
+  margin-left: 20px;
+  min-height: 120vh; /* Augmente la hauteur pour s'assurer qu'on peut scroller */
+
+  p {
     text-align: justify;
   }
-  h3{
+
+  h3 {
     text-align: center;
     letter-spacing: 2px;
     color: var(--blue-secondary);
     font-family: var(--font-secondary-bold);
   }
 }
+

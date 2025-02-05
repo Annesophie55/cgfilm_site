@@ -25,13 +25,7 @@
         </div>
         
         <!-- Bouton pour descendre -->
-        <button @click="scrollToNextSection" class="btn-scroll">
-          Explorer l'univers de <em>CG-Film</em>
-          <br>
-          <client-only>
-          <font-awesome-icon :icon="['fas', 'chevron-down']" />
-          </client-only>
-        </button>
+        <BtnScroll class="btn-scroll" :section-to-scroll="sectionToScroll" :btn-content="btnContent"/>
       </div>
     </swiper-slide>
   </swiper>
@@ -54,7 +48,8 @@ interface Film {
   videoId: string;
 }
 
-import filmsData from "~/data/films"; // Assure-toi que le fichier `films.ts` est bien typé
+import filmsData from "~/data/films";
+import BtnScroll from "./BtnScroll.vue";
 
 const films = ref<Film[]>(filmsData); // Typage de la liste des films
 
@@ -67,13 +62,10 @@ onMounted(() => {
   }, 5000);
 });
 
-// Typage de la fonction scrollToNextSection
-const scrollToNextSection = (): void => {
-  const nextSection = document.querySelector<HTMLElement>(".about-container");
-  if (nextSection) {
-    nextSection.scrollIntoView({ behavior: "smooth" });
-  }
-};
+//Variable pour la section à scroller
+const sectionToScroll: string = ".about-container";
+//Variable pour le contenu du bouton
+const btnContent: string = "Découvrir l'univers de CG-Film";
 </script>
 
 
@@ -127,26 +119,6 @@ const scrollToNextSection = (): void => {
 
 .btn-discover:hover {
   background: #087f7d;
-}
-
-.btn-scroll {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  background: rgb(217, 231, 230);
-  transform: translateX(-50%);
-  color: var(--gray-dark);
-  opacity: 0.8;
-  padding: 5px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.btn-scroll:hover {
-  background: #087f7d;
-  color: var(--white);
 }
 
 </style>

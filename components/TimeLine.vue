@@ -1,23 +1,23 @@
 <template>
   <div class="timeline-container">
-    <div class="timeline-items-logo">
-      <div class="timeline-logo"></div>
-      <div class="timeline-logo">
-        <NuxtImg src="/images/icon_camera.webp" alt="Icône d'une caméra" width="80"/>
+    <div class="timeline-items-icon">
+      <div class="timeline-icon"></div>
+      <div class="timeline-icon">
+        <NuxtImg src="/images/icon_camera.webp" alt="Icône d'une caméra" width="110"/>
       </div>
-      <div class="timeline-logo">
-        <NuxtImg src="/images/icon_flamme.webp" alt="Icône d'une caméra" width="80"/>
+      <div class="timeline-icon">
+        <NuxtImg src="/images/icon_flamme.webp" alt="Icône d'une caméra" width="110"/>
       </div>
-      <div class="timeline-logo">
-        <NuxtImg src="/images/icon_tv.webp" alt="Icône d'une caméra" width="80"/>
+      <div class="timeline-icon">
+        <NuxtImg src="/images/icon_tv.webp" alt="Icône d'une caméra" width="110"/>
       </div>
-      <div class="timeline-logo">
-        <NuxtImg src="/images/icon_tape.webp" alt="Icône d'une caméra" width="80"/>
+      <div class="timeline-icon">
+        <NuxtImg src="/images/icon_tape.webp" alt="Icône d'une caméra" width="110"/>
       </div>
-      <div class="timeline-logo">
-        <NuxtImg src="/images/icon_clap.webp" alt="Icône d'un clap de cinéma" width="80"/>
+      <div class="timeline-icon">
+        <NuxtImg src="/images/icon_clap.webp" alt="Icône d'un clap de cinéma" width="110"/>
       </div>
-      <div class="timeline-logo"></div>
+      <div class="timeline-icon"></div>
     </div>
     <div class="timeline-group-line">
       <div class="line-hidden"></div>
@@ -29,33 +29,35 @@
       <div class="line-hidden"></div>
     </div>
 
-    <div class="video-tap_border"></div>
-    <div class="video-tap__container">
+    <div class="video-tape-wrapper">
+      <div class="video-tap_border_top"></div>
+      <div class="video-tap__container">
       <div class="video-tape">
         <div class="video-tape__case case-1">
-          <div class="video-tape__content"></div>
+        <div class="video-tape__content"></div>
         </div>
         <div class="video-tape__case case-2">
-          <div class="video-tape__content">1975</div>
+        <div class="video-tape__content">1975</div>
         </div>
         <div class="video-tape__case case-3">
-          <div class="video-tape__content">1977</div>
+        <div class="video-tape__content">1977</div>
         </div>
         <div class="video-tape__case case-4">
-          <div class="video-tape__content">1980</div>
+        <div class="video-tape__content">1980</div>
         </div>
         <div class="video-tape__case case-5">
-          <div class="video-tape__content">1982</div>
+        <div class="video-tape__content">1982</div>
         </div>
         <div class="video-tape__case case-6">
-          <div class="video-tape__content">1985</div>
+        <div class="video-tape__content">1985</div>
         </div>
         <div class="video-tape__case case-7">
-          <div class="video-tape__content"></div>
+        <div class="video-tape__content"></div>
         </div>
       </div>
+      </div>
+      <div class="video-tap_border_bottom"></div>
     </div>
-    <div class="video-tap_border"></div>
 
     <div class="timeline-group-line">
       <div class="line-hidden"></div>
@@ -75,7 +77,7 @@
         <NuxtImg src="/images/canadair.webp" alt="Photo d'un canadair sur le tournage de 'L'étincelle'" width="180" height="180"/>
       </div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/france_tele.webp" alt="Logo France TV" width="180" height="180"/>
+        <NuxtImg src="/images/france_tele.webp" alt="icon France TV" width="180" height="180"/>
       </div>
       <div class="timeline-img__container">
         <NuxtImg src="/images/grue.webp" alt="Photo de Jimmy-Paul Coti filmant à l'aide d'ne grue" width="180" height="180"/>
@@ -128,8 +130,16 @@
   <a href="https://fr.vecteezy.com/vecteur-libre/flamme">Flamme Vecteurs par Vecteezy</a>
   <a href="https://fr.vecteezy.com/vecteur-libre/film">Film Vecteurs par Vecteezy</a>
   <a href="https://fr.vecteezy.com/vecteur-libre/clapboard">Clapboard Vecteurs par Vecteezy</a>
+  <a href="  https://fr.freepik.com/vecteurs-libre/fond-rideau-soie-rouge_5597360.htm#fromView=search&page=1&position=1&uuid=16b3fbe8-e362-48c7-bc63-631cf8d6b331&new_detail=true&query=rideau+th%C3%A9atre">Rideau de cinéma par Freepik</a>
+
 </template>
 
 <style scoped lang="scss">
 @use '@/assets/scss/components/time-line.scss';
 </style>
+
+<script setup lang="ts">
+import { useScrollAnimation } from "@/composables/useScrollAnimation";
+useScrollAnimation(".card"); // Anime les cartes au scroll
+</script>
+

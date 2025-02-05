@@ -1,7 +1,12 @@
 .timeline-container{
+  position: relative;
   padding: 40px 0;
+  top: 60px;
+  margin: 40px 0;
 }
-.timeline-items-logo{
+
+
+.timeline-items-icon{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -9,14 +14,21 @@
   height: 60px;
   margin-bottom: 5px;
 
-  .timeline-logo{
+
+  .timeline-icon{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    bottom: 67px;
 
+ 
     img{
-      margin: 0 88px;
+      margin: 0 67px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      padding: 5px;
     }
   }
 }
@@ -36,17 +48,24 @@
   }
 }
 
+.video-tape-wrapper{
+  position: relative;
+  width: 100%;
+}
+
 .video-tape{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 117%;
   height: 80px;
   font-size: 36px;
   margin-bottom: 5px;
   position: relative;
   background: black;
   border-top: 5px solid var(--black);
+  margin: auto;
+  transform: translateX(-7.5%);
 
   .video-tape__case{
     width: 100%;
@@ -59,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   .case-2{
@@ -92,12 +112,22 @@
   }
 }
 
-.video-tap_border{
-  height: 5px;
+.video-tap_border_top, .video-tap_border_bottom{
+  height: 7px;
   background-color: var(--black);
   width: 100%;
-  position: absolute;
-  top: 10px;
+}
+
+.video-tap_border_top{
+  position: relative;
+  bottom: 3px;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-tap_border_bottom{
+  position: relative;
+  top: 7px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .video-tape::before,
@@ -109,6 +139,7 @@
   height: 10px;
   background: radial-gradient(circle, var(--black) 40%, transparent 50%);
   background-size: 20px 10px;
+  z-index: 2;
 }
 
 .video-tape::before {
@@ -118,7 +149,6 @@
 .video-tape::after {
   bottom: -10px;
 }
-
 
 .timeline-group-img{
   display: flex;
@@ -131,12 +161,11 @@
     border-radius: 50%;
     margin: auto;
 
-
     img{
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.4);
     }
   }
 
@@ -147,14 +176,15 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 24px;
+  height: 18px;
 
   .point{
     height: 100%;
-    width: 24px;
+    width: 18px;
     background-color: var(--black);
     margin: auto;
     border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -176,6 +206,15 @@
     background-color: rgba(111, 215, 247, 0.215);
     padding: 10px;
     border-radius: 5px;
-    opacity: 0.7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
+
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
+}
+
+

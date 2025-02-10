@@ -1,17 +1,28 @@
-.timeline-container{
+.timeline-desktop{
   position: relative;
   padding: 40px 0;
   top: 60px;
   margin-bottom: 40px;
-  height: 800px;
+  height: 600px;
   
   @media screen and (max-width: 768px){
     display: flex;
     padding: auto;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     padding: 20px 20px;
     height: 680px;
+  }
+
+   @media screen and (max-width: 666px){
+    height: 550px;
+    padding: 7px;
+    margin-bottom: 60px;
+   }
+
+   @media screen and (max-width: 490px) {
+    height: 800px;
+
   }
 }
 
@@ -24,13 +35,14 @@
   @media screen and (max-width: 768px){
     flex-direction: column;
     height: 100%;
-    width: 90px;
+    width: auto;
     margin-right: 5px;
   }
 
 
+
   .timeline-icon{
-    width: 100%;
+    width: 90px;
     height: 100%;
     margin: auto;
     position: relative;
@@ -43,10 +55,21 @@
       align-items: start;
     }
 
+    @media (max-width: 666px){
+      width: 45px;
+      height: 45px;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 490px) {
+      width: 80px; // Agrandit le conteneur des icônes
+      height: 80px;
+    }
+
  
     img{
-      width: 90px;
-      height: 90px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.4);
     }
@@ -67,6 +90,10 @@
     margin: auto 0px auto -5px;
   }
 
+  @media screen and (max-width: 666px){
+    width: 20px;
+  }
+
 
   .line{
     height: 100%;
@@ -78,6 +105,10 @@
       height: 4px;
       width: 100%;
       margin: auto 0px;
+    }
+
+    @media screen and (max-width: 666px){
+      height: 3px;
     }
   }
 }
@@ -92,7 +123,6 @@
     display: flex;
     margin: auto 0px auto 5px;
     height: 100%;
-
   }
 }
 
@@ -117,6 +147,13 @@
     font-size: 24px;
   }
 
+  @media screen and (max-width: 666px){
+    flex-direction: column;
+    width: 40px;
+    height: 100%;
+    font-size: 18px;
+  }
+
 
   .video-tape__case{
     width: 100%;
@@ -135,6 +172,15 @@
       height: auto;
       writing-mode: vertical-rl; /* ou vertical-lr */
       text-orientation: upright;
+    }
+
+    @media screen and (max-width: 666px){
+      width: 40px;
+    }
+
+    @media screen and (max-width: 490px) {
+      font-size: 22px;
+      height: 200px;
     }
 
   }
@@ -194,6 +240,11 @@
     width: 7px;
     height: 99.7%;
   }
+
+  @media screen and (max-width: 666px){
+    width: 4px;
+  }
+
 }
 
 .video-tap_border_top{
@@ -205,6 +256,11 @@
     bottom: 0px;
     right: 9px;
   }
+
+  @media screen and (max-width: 666px){
+    bottom: 0px;
+    right: 6px;
+  }
 }
 
 .video-tap_border_bottom{
@@ -215,6 +271,11 @@
   @media screen and (max-width: 768px){
     top: 0px;
     right: 3px;
+  }
+
+  @media screen and (max-width: 666px){
+    top: 0px;
+    right: 0px;
   }
 }
 
@@ -263,6 +324,30 @@
   }
 }
 
+@media screen and (max-width: 666px) {
+  .video-tape::before,
+  .video-tape::after {
+    content: "";
+    left: 0;
+    width: 7px; /* Devient plus étroit */
+    height: 100%; /* Prend toute la hauteur */
+    background: radial-gradient(circle, var(--black) 40%, transparent 50%);
+    background-size: 7px 20px; /* Ajustement pour l'effet */
+    z-index: 2;
+  }
+
+  /* 📌 Déplacement des décorations sur les côtés */
+  .video-tape::before {
+    left: -6px; /* Passe à gauche */
+    top: 0;
+  }
+
+  .video-tape::after {
+    left: 40px; /* Passe à droite */
+    top: 0;
+  }
+}
+
 
 .timeline-group-img{
   display: flex;
@@ -271,7 +356,7 @@
 
   @media screen and (max-width: 768px){
     flex-direction: column;
-    margin: auto;
+    margin: auto 0;
     height: 100%;
   }
 
@@ -283,6 +368,17 @@
     position: relative;
     display: flex;
     justify-content: center;
+
+
+    @media screen and (max-width: 666px){
+      width: 75px;
+      height: 75px;
+    }
+
+    @media screen and (max-width: 490px) {
+      width: 120px; // Agrandit le conteneur des icônes
+      height: 120px;
+    }
 
     img{
       width: 100%;
@@ -315,6 +411,17 @@
     margin: auto;
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 666px){
+      height: 14px;
+      width: 14px;
+
+    }
+
+    @media screen and (max-width: 490px) {
+      width: 18px; // Agrandit le conteneur des icônes
+      height: 18px;
+    }
   }
 }
 
@@ -330,6 +437,7 @@
 
   @media screen and (max-width: 768px){
     flex-direction: column;
+    height: 100%;
   }
 
   .card{
@@ -351,14 +459,19 @@
     align-items: center;
     cursor: pointer;
 
-    &:hover{
-      transform: scale(1.5);
-    }
-
     @media screen and (max-width: 768px){
       width: 100%;
-      height: 120px;
+      height: 100%;
       margin: auto 0px 8px 3px;
+      width: 95%; /* ✅ Plus étroit pour éviter le débordement */
+      font-size: 14px; /* ✅ Texte légèrement réduit */
+      padding: 8px;
+      justify-self: baseline;
+    }
+
+    @media screen and (max-width: 666px){
+      font-size: 12px;
+      overflow: visible;
     }
   }
 
@@ -369,3 +482,44 @@
 }
 
 
+@media screen and (max-width: 480px) {
+
+/* Halo néon flou */
+.timeline-img__container::before {
+  content: "";
+  position: absolute;
+  top: -8px;       // Ajustez l'espacement autour de l'image
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #0F95A4, #117E88, #0F95A4);
+  filter: blur(5px);
+  z-index: -1;
+  animation: neonRotate 4s linear infinite;
+}
+
+/* Bordure nette (halo) */
+.timeline-img__container::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  border: 2px solid rgba(15, 149, 164, 0.8);
+  z-index: -1;
+  animation: neonRotate 4s linear infinite;
+}
+
+/* Animation de rotation */
+@keyframes neonRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+}

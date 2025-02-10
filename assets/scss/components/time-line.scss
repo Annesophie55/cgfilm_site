@@ -2,33 +2,53 @@
   position: relative;
   padding: 40px 0;
   top: 60px;
-  margin: 40px 0;
+  margin-bottom: 40px;
+  height: 800px;
+  
+  @media screen and (max-width: 768px){
+    display: flex;
+    padding: auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 20px;
+    height: 680px;
+  }
 }
 
 
 .timeline-items-icon{
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 5px;
+  height: 85px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    height: 100%;
+    width: 90px;
+    margin-right: 5px;
+  }
 
 
   .timeline-icon{
+    width: 100%;
+    height: 100%;
+    margin: auto;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    bottom: 67px;
+
+    @media screen and (max-width: 768px){
+      width: 90px;
+      height: 90px;
+      align-items: start;
+    }
 
  
     img{
-      margin: 0 67px;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.4);
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      padding: 5px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.4);
     }
   }
 }
@@ -38,46 +58,84 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 30px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    width: 30px;
+    height: 100%;
+    margin: auto 0px auto -5px;
+  }
+
 
   .line{
     height: 100%;
     width: 4px;
     background-color: var(--black);
-    margin: auto;
+    margin: 0px auto;
+
+    @media screen and (max-width: 768px){
+      height: 4px;
+      width: 100%;
+      margin: auto 0px;
+    }
   }
 }
 
 .video-tape-wrapper{
   position: relative;
   width: 100%;
+
+  @media screen and (max-width: 768px){
+    height: 100%;
+    width: auto;
+    display: flex;
+    margin: auto 0px auto 5px;
+    height: 100%;
+
+  }
 }
 
 .video-tape{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 117%;
-  height: 80px;
-  font-size: 36px;
+  width: 119%;
+  height: 40px;
+  font-size: 28px;
   margin-bottom: 5px;
   position: relative;
   background: black;
   border-top: 5px solid var(--black);
   margin: auto;
-  transform: translateX(-7.5%);
+  transform: translateX(-8%);
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    width: 80px;
+    height: auto;
+    font-size: 24px;
+  }
+
 
   .video-tape__case{
     width: 100%;
-    height: 80px;
-    border-top: 10px solid var(--black);
-    border-bottom: 10px solid var(--black);
+    height: 40px;
+    border-top: 5px solid var(--black);
+    border-bottom: 5px solid var(--black);
     border-left: 5px solid var(--black);
     border-right: 5px solid var(--black);
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+      width: 75px;
+      height: auto;
+      writing-mode: vertical-rl; /* ou vertical-lr */
+      text-orientation: upright;
+    }
 
   }
 
@@ -88,6 +146,10 @@
   .case-1{
     background-color: #F2F2F2;
     width: 50%;
+
+    @media screen and (max-width: 768px){
+      display: none;
+    }
   }
 
   .case-3{
@@ -109,25 +171,51 @@
   .case-7{
     background-color: #F2F2F2;
     width: 50%;
+
+    @media screen and (max-width: 768px){
+      display: none;
+    }
   }
+}
+
+@media screen and (max-width: 768px){
+  .line-hidden{
+    display: none;
+  }
+  
 }
 
 .video-tap_border_top, .video-tap_border_bottom{
   height: 7px;
   background-color: var(--black);
   width: 100%;
+
+  @media (max-width: 768px){
+    width: 7px;
+    height: 99.7%;
+  }
 }
 
 .video-tap_border_top{
   position: relative;
   bottom: 3px;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: 768px){
+    bottom: 0px;
+    right: 9px;
+  }
 }
 
 .video-tap_border_bottom{
   position: relative;
   top: 7px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: 768px){
+    top: 0px;
+    right: 3px;
+  }
 }
 
 .video-tape::before,
@@ -150,16 +238,51 @@
   bottom: -10px;
 }
 
+@media screen and (max-width: 768px) {
+  .video-tape::before,
+  .video-tape::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 10px; /* Devient plus étroit */
+    height: 100%; /* Prend toute la hauteur */
+    background: radial-gradient(circle, var(--black) 40%, transparent 50%);
+    background-size: 10px 20px; /* Ajustement pour l'effet */
+    z-index: 2;
+  }
+
+  /* 📌 Déplacement des décorations sur les côtés */
+  .video-tape::before {
+    left: -6px; /* Passe à gauche */
+    top: 0;
+  }
+
+  .video-tape::after {
+    left: 76px; /* Passe à droite */
+    top: 0;
+  }
+}
+
+
 .timeline-group-img{
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  height: 90px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+  }
+
 
   .timeline-img__container{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 110px;
+    height: 110px;
     margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
 
     img{
       width: 100%;
@@ -178,8 +301,15 @@
   width: 100%;
   height: 18px;
 
-  .point{
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    width: 18px;
     height: 100%;
+  }
+
+
+  .point{
+    height: 18px;
     width: 18px;
     background-color: var(--black);
     margin: auto;
@@ -189,18 +319,24 @@
 }
 
 .timeline-group-card{
+  position: relative;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   height: auto;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 8px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
 
   .card{
     text-align: center;
     margin: auto;
-    width: 200px;
+    width: 18%;
+    height: max-content;
     margin-top: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     background-color: rgba(111, 215, 247, 0.215);
@@ -209,6 +345,21 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+      transform: scale(1.5);
+    }
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+      height: 120px;
+      margin: auto 0px 8px 3px;
+    }
   }
 
   .card.visible {

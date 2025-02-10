@@ -3,7 +3,6 @@ import { onMounted, onUnmounted } from "vue";
 export function useScrollAnimation(selector: string, offset: number = 100) {
   const handleScroll = () => {
     document.querySelectorAll(selector).forEach((element) => {
-      console.log("Vérification de l'élément :", element); 
       if (element.getBoundingClientRect().top < window.innerHeight - offset) {
         element.classList.add("visible");
       }

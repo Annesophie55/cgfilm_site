@@ -2,7 +2,7 @@
   <div ref="cinemaScene" class="cinema-scene">
     <div class="curtain curtain-left" :class="{ open: isRevealed }"></div>
     <div class="curtain curtain-right" :class="{ open: isRevealed }"></div>
-    <h2 class="scene-title" :class="{ visible: isRevealed }">🎬 L'Histoire d'un Réalisateur 🎥</h2>
+    <h2 class="scene-title" :class="{ visible: isRevealed }">🎬 Les débuts d'un cinéaste 🎥</h2>
   </div>
 </template>
 
@@ -36,6 +36,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .scene-title {

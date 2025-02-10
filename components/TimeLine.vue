@@ -1,23 +1,23 @@
 <template>
   <div class="timeline-container">
     <div class="timeline-items-icon">
-      <div class="timeline-icon"></div>
+      <!-- <div class="timeline-icon"></div> -->
       <div class="timeline-icon">
-        <NuxtImg src="/images/icon_camera.webp" alt="Icône d'une caméra" width="110"/>
+        <NuxtImg src="/images/icon_camera.webp" alt="Icône d'une caméra" width="90" height="90"/>
       </div>
       <div class="timeline-icon">
-        <NuxtImg src="/images/icon_flamme.webp" alt="Icône d'une caméra" width="110"/>
+        <NuxtImg src="/images/icon_flamme.webp" alt="Icône d'une caméra" width="90" height="90"/>
       </div>
       <div class="timeline-icon">
-        <NuxtImg src="/images/icon_tv.webp" alt="Icône d'une caméra" width="110"/>
+        <NuxtImg src="/images/icon_tv.webp" alt="Icône d'une caméra" width="90" height="90"/>
       </div>
       <div class="timeline-icon">
-        <NuxtImg src="/images/icon_tape.webp" alt="Icône d'une caméra" width="110"/>
+        <NuxtImg src="/images/icon_tape.webp" alt="Icône d'une caméra" width="90" height="90"/>
       </div>
       <div class="timeline-icon">
-        <NuxtImg src="/images/icon_clap.webp" alt="Icône d'un clap de cinéma" width="110"/>
+        <NuxtImg src="/images/icon_clap.webp" alt="Icône d'un clap de cinéma" width="90" height="90"/>
       </div>
-      <div class="timeline-icon"></div>
+      <!-- <div class="timeline-icon"></div> -->
     </div>
     <div class="timeline-group-line">
       <div class="line-hidden"></div>
@@ -71,19 +71,19 @@
     <div class="timeline-group-img">
       <div class="timeline-img-hidden"></div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/jp_coindet.webp" alt="Photo de Jimmy-Paul Coti en 1975" width="180" height="180"/>
+        <NuxtImg src="/images/jp_coindet.webp" alt="Photo de Jimmy-Paul Coti en 1975" width="110" height="110"/>
       </div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/canadair.webp" alt="Photo d'un canadair sur le tournage de 'L'étincelle'" width="180" height="180"/>
+        <NuxtImg src="/images/canadair.webp" alt="Photo d'un canadair sur le tournage de 'L'étincelle'" width="110" height="110"/>
       </div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/france_tele.webp" alt="icon France TV" width="180" height="180"/>
+        <NuxtImg src="/images/france_tele.webp" alt="icon France TV" width="110" height="110"/>
       </div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/grue.webp" alt="Photo de Jimmy-Paul Coti filmant à l'aide d'ne grue" width="180" height="180"/>
+        <NuxtImg src="/images/grue.webp" alt="Photo de Jimmy-Paul Coti filmant à l'aide d'ne grue" width="110" height="110"/>
       </div>
       <div class="timeline-img__container">
-        <NuxtImg src="/images/tournage_le_juste.webp" alt="Photo du tournage de 'Le Juste'" width="180" height="180"/>
+        <NuxtImg src="/images/tournage_le_juste.webp" alt="Photo du tournage de 'Le Juste'" width="110" height="110"/>
       </div>
       <div class="timeline-img-hidden"></div>
     </div>
@@ -108,7 +108,7 @@
     <div class="timeline-group-card">
       <div class="card-hidden"></div>
       <div class="card">
-        <p>Jimmy-Paul commence sa carrière avec "Dernière Mission", un projet ambitieux inspiré de James Bond, incluant des cascades en voiture et en moto.</p>
+        <p>Jimmy-Paul Coti commence sa carrière avec "Dernière Mission", un projet ambitieux inspiré de James Bond, incluant des cascades en voiture et en moto.</p>
       </div>
       <div class="card">
         <p>Avec "L’Étincelle", Jimmy-Paul documente les incendies dévastateurs dans le sud de la France. Un film audacieux tourné aux côtés des pompiers et dans des Canadairs.</p>

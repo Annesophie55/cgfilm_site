@@ -64,6 +64,8 @@
             </ul>
         </div>
         <Parallax />
+
+
       </section>
 
       <section class="partners">

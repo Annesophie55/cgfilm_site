@@ -17,14 +17,7 @@
     <section class="film-maker__bio">
       <h2 class="section-title">Les premiers pas d'un réalisateur passionné</h2>
       <div class="bio-content">
-        <div class="img-fixed-container">
-          <div class="img-content">
-            <figure>
-              <NuxtImg src="/images/derriere_la_camera.webp" alt="Photo de Jimmy-Paul Coti" width="400" height="400"/>
-              <figcaption>Jimmy-Paul Coti derrière la camera</figcaption>
-            </figure>
-          </div>
-        </div>
+          <ImgSticky />
           <div class="bio-txt">
             <p>Jimmy-Paul Coti n’avait jamais imaginé devenir un jour réalisateur. Après avoir exercé une dizaine de métiers variés dans l’industrie et le commerce, la providence lui a offert une opportunité unique à 26 ans, sans formation académique ni école de cinéma.</p>
             <h3>"Les débuts en super 8 !"</h3>
@@ -49,6 +42,8 @@ import Footer from '~/components/Footer.vue';
 import TimeLine from '~/components/TimeLine.vue';
 import BtnScroll from '~/components/BtnScroll.vue';
 import CinemaCurtain from '~/components/CinemaCurtain.vue';
+import Parallax from '~/components/Parallax.vue';
+import ImgSticky from '~/components/ImgSticky.vue';
 
 </script>
 

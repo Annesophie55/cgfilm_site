@@ -246,7 +246,8 @@ function closeCard() {
     height: 103%;
     margin-left: 10px;
     border-radius: 50%;
-    background: linear-gradient(17deg, rgba(129,129,242,0.18735416529893212) 43%, rgba(80,151,221,0.30500122412246145) 67%, rgba(5,125,236,0.6467379188003326) 91%);
+    background: rgb(129,129,242);
+    background: linear-gradient(17deg, rgba(129,129,242,0.18735416529893212) 62%, rgba(80,151,221,0.30500122412246145) 80%, rgba(5,125,236,0.6467379188003326) 96%);
     animation: laser-animation 1s infinite;
     z-index: 0; /* Met l'effet laser derrière l'image */
 

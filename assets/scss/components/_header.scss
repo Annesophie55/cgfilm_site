@@ -44,6 +44,7 @@ header{
   justify-content: flex-start;
   letter-spacing: 1px;
   font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 768px) {
     display: none;

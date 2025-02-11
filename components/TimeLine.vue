@@ -88,18 +88,23 @@
       <div class="timeline-group-img">
         <div class="timeline-img__container" @click="openCard(0)">
           <NuxtImg src="/images/jp_coindet.webp" alt="Photo de Jimmy-Paul Coti en 1975" width="110" height="110"/>
+          <div class="laser-effect"></div>
         </div>
         <div class="timeline-img__container" @click="openCard(1)">
           <NuxtImg src="/images/canadair.webp" alt="Photo d'un canadair sur le tournage de 'L’étincelle'" width="110" height="110"/>
+          <div class="laser-effect"></div>
         </div>
         <div class="timeline-img__container" @click="openCard(2)">
           <NuxtImg src="/images/france_tele.webp" alt="Icone France TV" width="110" height="110"/>
+          <div class="laser-effect"></div>
         </div>
         <div class="timeline-img__container" @click="openCard(3)">
           <NuxtImg src="/images/grue.webp" alt="Photo de Jimmy-Paul Coti filmant avec une grue" width="110" height="110"/>
+          <div class="laser-effect"></div>
         </div>
         <div class="timeline-img__container" @click="openCard(4)">
           <NuxtImg src="/images/tournage_le_juste.webp" alt="Photo du tournage de 'Le Juste'" width="110" height="110"/>
+          <div class="laser-effect"></div>
         </div>
       </div>
 
@@ -218,24 +223,49 @@ function closeCard() {
 }
 
 @media screen and (max-width: 490px) {
-  .timeline-img__container::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(90deg, #0F95A4, #117E88);
-    border-radius: 3px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .timeline-img__container {
+    position: relative;
+    display: inline-block;
   }
-  .timeline-img__container:active::after,
-  .timeline-img__container:hover::after {
-    opacity: 1;
+
+  .timeline-img__container img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: 25px;
+    box-shadow: none;
+
+  }
+
+  /* Effet laser */
+  .laser-effect {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 103%;
+    height: 103%;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: linear-gradient(17deg, rgba(129,129,242,0.18735416529893212) 43%, rgba(80,151,221,0.30500122412246145) 67%, rgba(5,125,236,0.6467379188003326) 91%);
+    animation: laser-animation 1s infinite;
+    z-index: 0; /* Met l'effet laser derrière l'image */
+
+  }
+
+  /* Animation laser */
+  @keyframes laser-animation {
+    0%, 50% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);  
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
+
 
 /* Styles pour la pop-up */
 .popup-overlay {
@@ -276,5 +306,4 @@ function closeCard() {
   cursor: pointer;
 }
 
-/* (Les styles existants du composant timeline restent inchangés) */
 </style>

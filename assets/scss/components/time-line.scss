@@ -482,44 +482,4 @@
 }
 
 
-@media screen and (max-width: 480px) {
 
-/* Halo néon flou */
-.timeline-img__container::before {
-  content: "";
-  position: absolute;
-  top: -8px;       // Ajustez l'espacement autour de l'image
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #0F95A4, #117E88, #0F95A4);
-  filter: blur(5px);
-  z-index: -1;
-  animation: neonRotate 4s linear infinite;
-}
-
-/* Bordure nette (halo) */
-.timeline-img__container::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 50%;
-  border: 2px solid rgba(15, 149, 164, 0.8);
-  z-index: -1;
-  animation: neonRotate 4s linear infinite;
-}
-
-/* Animation de rotation */
-@keyframes neonRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-}

@@ -17,7 +17,7 @@
     <section class="film-maker__bio">
       <h2 class="section-title">Les premiers pas d'un réalisateur passionné</h2>
       <div class="bio-content">
-          <ImgSticky />
+        <ImgSticky src="/images/derriere_la_camera.webp" alt="Photo de Jimmy-Paul Coti" :width="400" :height="400" caption="Jimmy-Paul Coti derrière la caméra"/>
           <div class="bio-txt">
             <p>Jimmy-Paul Coti n’avait jamais imaginé devenir un jour réalisateur. Après avoir exercé une dizaine de métiers variés dans l’industrie et le commerce, la providence lui a offert une opportunité unique à 26 ans, sans formation académique ni école de cinéma.</p>
             <h3>"Les débuts en super 8 !"</h3>
@@ -51,13 +51,8 @@
       <h2 class="section-title">Un Parcours Exceptionnel et des Projets à Venir</h2>
       <div class="article-container">
         <aside class="article-encart">
-          <div class="article__img">
-            <NuxtImg src="/images/jimmy_provence.webp" alt="Jimmy Paul Cotti posant pour le journal provence" width="300" height="390"/>
-          </div>
-      
-          <div class="article__img">
-            <NuxtImg src="/images/aile.webp" alt="Affiche 'L'Aile et la Bête'" width="300" height="390"/>
-          </div>
+          <ImgSticky src="/images/jimmy_provence.webp" alt="Jimmy Paul Cotti posant pour le journal provence" :width="300" :height="390" :breakpoint="768"/>
+          <ImgSticky src="/images/aile.webp" alt="Affiche 'L'Aile et la Bête'" :width="300" :height="390" :breakpoint="768"/>
         </aside>
         <article class="article-content">
           <div class="article-content_txt">
@@ -75,18 +70,14 @@
               <li>Écriture du scénario pour le long-métrage 'Les Embruns de Liberté'.</li>
             </ul>
           </div>
-            </div>
-            <div class="article-content_txt_right">
-              <div class="article__img">
-                <NuxtImg src="/images/chemin_or_blanc_affiche.webp" alt="Affiche 'Le chemin de l'or Blanc'" width="300" height="390"/>
-              </div>
-              <div class="article__img">
-                <NuxtImg src="/images/sabots_venus.webp" alt="Affiche 'Les sabots de Vénus'" width="300" height="390"/>
-              </div>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
+    </article>
+    <aside class="article-encart">
+      <ImgSticky src="/images/chemin_or_blanc_affiche.webp" alt="Affiche 'Le chemin de l'or Blanc'" :width="300" :height="390" :breakpoint="900"/>
+      <ImgSticky src="/images/sabots_venus.webp" alt="Affiche 'Les sabots de Vénus'" :width="300" :height="390" :breakpoint="900"/>
+    </aside>
+  </div>
     </section>
   </main>
   <Footer />

@@ -105,7 +105,12 @@ import ImgSticky from '~/components/ImgSticky.vue';
     height: 100%;
     position: sticky;
     top: 0px;
-    margin:auto;
+    margin: 0 auto;
+  }
+
+  .img-content{
+    top: 0px;
+    margin-bottom: 20px;
   }
 }
 

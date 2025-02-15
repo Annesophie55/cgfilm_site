@@ -28,11 +28,15 @@ const props = defineProps<{
     position: sticky;
     top: 70px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 
   @media (max-width: 758px) {
     width: 80%;
     margin: auto;
+    position: relative;
   }
 }
 
@@ -43,6 +47,7 @@ const props = defineProps<{
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 /* Texte sous l’image */
@@ -70,7 +75,7 @@ aside {
 
 @media (max-width:768px) {
   .imgSticky_mobile .img-content {
-    position: relative !important;
+    position: relative;
   }
 }
 

@@ -66,7 +66,7 @@
       </section>
 
       <section>
-        <Parallax imgSrc="/images/ULM.webp" imgAlt="Photo avant le décollage en ULM pour le tournage de 'Les sabots de Vénus''" />
+        <Parallax backgroundImg="/images/ULM.webp" />
       </section>
 
 

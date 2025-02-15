@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['vue-toastification', 'gsap'], // Transpile a library if needed
+    transpile: ['vue-toastification'], // Transpile a library if needed
   },
 
   compatibilityDate: '2025-01-24',

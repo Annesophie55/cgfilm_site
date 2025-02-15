@@ -32,7 +32,7 @@
       <TimeLine />
     </section>
     <section>
-      <Parallax imgSrc="/images/travelling.webp" imgAlt="Travelling Circulaire avec Christian Barbier et Jimmy-Paul Coti" />
+      <Parallax backgroundImg="/images/travelling.webp" />
     </section>
 
     <section>
@@ -49,35 +49,34 @@
 
     <section class="article">
       <h2 class="section-title">Un Parcours Exceptionnel et des Projets à Venir</h2>
+
       <div class="article-container">
-        <aside class="article-encart">
-          <ImgSticky src="/images/jimmy_provence.webp" alt="Jimmy Paul Cotti posant pour le journal provence" :width="300" :height="390" :breakpoint="768"/>
-          <ImgSticky src="/images/aile.webp" alt="Affiche 'L'Aile et la Bête'" :width="300" :height="390" :breakpoint="768"/>
-        </aside>
-        <article class="article-content">
-          <div class="article-content_txt">
-            <div class="article-content_txt_left">
-              <h3>Des aventures cinématographiques uniques qui marquent l’histoire et des projets en constante évolution.</h3>
+        <div class="imgSticky_mobile" >
+        <ImgSticky src="/images/jimmy_provence.webp" alt="Jimmy Paul Cotti posant pour le journal provence" :width="300" />
+        <ImgSticky src="/images/chemin_or_blanc_affiche.webp" alt="Affiche 'Le chemin de l'or Blanc'" :width="300" :height="390" />
+        </div>
+
+        <ImgSticky src="/images/jimmy_provence.webp" alt="Jimmy Paul Cotti posant pour le journal provence" :width="300" class="imgSticky_desktop"/>
+
+        <div class="article-content">
+          <h3>Des aventures cinématographiques uniques qui marquent l’histoire et des projets en constante évolution.</h3>
+          <article class="article-content_txt">
               <p>"Cinéaste autodidacte, j'ai eu la chance de réaliser plusieurs films pour la télévision française, <strong>diffusés dans plus de 22 pays</strong>. Mon premier long-métrage, Il était une fois... Les Sabots de Vénus, tourné en décors naturels, m’a ouvert les portes du prestigieux <strong>Festival de Cannes</strong>. Parmi mes œuvres marquantes :</p>
               <ul>
                 <li><NuxtImg src="/images/icon_camera.webp" alt="icone d'une caméra" width="30" height="30" class="icon_camera_puce"/>Le Radeau, une prouesse sportive unique en coproduction avec France 2, diffusée plus de 500 fois dans le monde entier.</li>
                 <li><NuxtImg src="/images/icon_camera.webp" alt="icone d'une caméra" width="30" height="30" class="icon_camera_puce"/>L’Aile et la Bête, un défi inédit en ULM, filmé dans le Grand Canyon du Verdon. Aujourd’hui, je poursuis ma passion en montant un documentaire de 90 minutes et en développant le scénario de mon prochain long-métrage : Les Embruns de Liberté."</li>
               </ul>
-              <div class="article__aside_txt">
+          </article>
+          <aside >
             <p>Projets en cours :</p>
             <ul>
               <li>Montage d’un documentaire de 90 minutes.</li>
               <li>Écriture du scénario pour le long-métrage 'Les Embruns de Liberté'.</li>
             </ul>
-          </div>
+          </aside>
         </div>
-      </div>
-    </article>
-    <aside class="article-encart">
-      <ImgSticky src="/images/chemin_or_blanc_affiche.webp" alt="Affiche 'Le chemin de l'or Blanc'" :width="300" :height="390" :breakpoint="900"/>
-      <ImgSticky src="/images/sabots_venus.webp" alt="Affiche 'Les sabots de Vénus'" :width="300" :height="390" :breakpoint="900"/>
-    </aside>
-  </div>
+      <ImgSticky src="/images/chemin_or_blanc_affiche.webp" alt="Affiche 'Le chemin de l'or Blanc'" :width="300" :height="390" class="imgSticky_desktop"  />
+    </div>
     </section>
   </main>
   <Footer />
@@ -97,4 +96,25 @@ import ImgSticky from '~/components/ImgSticky.vue';
 
 <style scoped lang="scss">
 @use '@/assets/scss/pages/filmMaker.scss';
+.imgSticky_mobile{
+  display: none;
+
+  @media (max-width:768px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 0px;
+    margin:auto;
+  }
+}
+
+.imgSticky_desktop{
+  display: flex;
+
+  @media (max-width:768px) {
+    display: none;
+  }
+}
+
 </style>
